@@ -1,2 +1,2 @@
 # sharpCoders
-A fullstack course using HTML, CSS, JavaScript (with Angular) and C#
+A fullstack course, by Imã Tech, using HTML, CSS, JavaScript (with Angular) and C#
