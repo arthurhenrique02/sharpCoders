@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+
+    <style>
+        /* small */
+        @media screen and (max-width:600px) {
+            body{
+                background-color: aqua;
+            }
+
+            /* the after will add the content
+            after the h1 tag content
+            (The subclass "before" works similary,
+            but it will add before the h1 content) */
+            h1::after{
+                content: "Small";
+            }
+        }
+        /* average size */
+        @media screen and (min-width:601px) and (max-width:1000px) {
+            body{
+                background-color: purple;
+            }
+
+            /* the after will add the content
+            after the h1 tag content
+            (The subclass "before" works similary,
+            but it will add before the h1 content) */
+            h1::after{
+                content: "Average";
+            }
+        }
+
+        /* big */
+        @media screen and (min-width:1001px) {
+            body{
+                background-color: lightblue;
+            }
+
+            /* the after will add the content
+            after the h1 tag content
+            (The subclass "before" works similary,
+            but it will add before the h1 content) */
+            h1::after{
+                content: "Big";
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolution: </h1>
+</body>
+</html>
