@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        abc = "200\n100"
+        lines = abc.split("\n");
+        let value_1 = parseInt(lines.shift());
+ let value_2 = parseInt(lines.shift());
+ let sum = 0;
+ if (value_1 > value_2){
+    
+    value_1, value_2 = value_2, value_1;
+ }
+ console.log(value_1, value_2);
+
+for (let i = value_1; i <= value_2; i++){
+    // check if is divisible by 13
+    if (i % 13 === 0){
+        continue;
+    }
+    sum += i;
+}
+console.log(sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

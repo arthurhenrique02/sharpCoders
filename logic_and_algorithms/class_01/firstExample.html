@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // show message on body
+        document.write("hello, Rayssa!");
+        
+        // correct way to change a HTML tag
+        // without put the script in the end of the body
+        window.onload = function() {
+            document.getElementsByTagName("h1")[0].innerHTML = "hello, world!";
+        }
+        
+        alert("mensagem via alert")
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

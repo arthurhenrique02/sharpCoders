@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var input = `1\n2\n3\n4\n5\n0`;
+        var lines = input.split('\n');
+
+
+        function min(x, y){
+    return x > y ? y : x;
+}
+let value = parseInt(lines.shift());
+while(value > 0){
+    if (value === 1){
+        // generating errors to see whats wrong
+        console.log("  1\n\n");
+    }
+    let nums_2d = [];
+    for(let i = 1; i <= value; i++){
+        let str = "";
+        nums_2d.push([]);
+        for (let j = 1; j <= value; j++){
+            let min_x = min(i, (value - i + 1));
+            let min_y = min(j, (value - j + 1));
+            let min_xy = min(min_x, min_y);
+            nums_2d[i-1][j-1] = min_xy;
+            str += min_xy.toString() + "   ";
+        }
+        console.log(str.trim());
+    }
+    console.log('');
+    console.log('');
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    value = parseInt(lines.shift());
+}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

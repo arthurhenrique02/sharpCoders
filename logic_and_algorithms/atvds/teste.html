@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var input = `1\n2\n3\n4\n5\n0`;
+        var lines = input.split('\n');
+
+        // create function to check the min value
+function min(x, y){
+    // create a ternary operation
+    return x > y ? y : x;
+}
+// get initial value
+let value = parseInt(lines.shift());
+// iter through values while value > 0
+while (value > 0){
+    if (value === 1){
+        console.log(`  1\n\n`);
+        value = parseInt(lines.shift());
+        continue;
+    }
+    // create array
+    let nums_2d = [];
+    // create temp str
+    let str = '';
+    // fill up the array
+    for(let i = 1; i <= value; i++){
+        // create columns
+        nums_2d.push([]);
+        for(let j = 1; j <= value; j++){
+            // check min of x and y, and both after
+            let min_x = min(i, value - i + 1);
+            let min_y = min(j, value - j + 1);
+            let min_x_y = min(min_x, min_y);
+            // fill up the array (increment in the index - 1)
+            nums_2d[i-1][j-1] = min_x_y;
+            // concat strings
+            str += "  "+min_x_y.toString() + " ";
+        }
+        // trim at the end and go to next line
+        str = str.trimEnd() + "\n";
+    }
+    // print matrix
+    console.log(str+"\n");
+    // change the value at the end
+    value = parseInt(lines.shift());
+    
+}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

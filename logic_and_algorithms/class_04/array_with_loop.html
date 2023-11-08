@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // an array is an data structure
+        // that can store more than one data
+        let names = ["arthur", "rayssa", "renato", "rayane"];
+
+        let name = prompt("Name: ").trim().toLowerCase();
+        
+
+        let exists = false;
+        for (let i = 0; i < names.length; i++){
+            if (name == names[i]){
+                exists = true;
+            }
+        }
+
+        if (exists){
+            console.info("NOME EXISTE");
+        }
+        else{
+            console.error("NOME NAO EXISTE");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

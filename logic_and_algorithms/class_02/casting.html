@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        grade1AsNum:Number;
+        grade2AsNum:Number;
+        // get grade
+        let grade1 = prompt("informe a nota");
+        let grade2 = prompt("informe a nota");
+
+        // cast grades and add/get 2 number after point
+        grade1AsNum = parseFloat(grade1).toFixed(2);
+        grade2AsNum = parseFloat(grade2).toFixed(2);
+
+        sum = grade1AsNum + grade2AsNum;
+
+        // check if is not a number
+        if (!isNaN(sum)){
+            document.writeln(sum);
+        }
+        else{
+            alert("NAO ENVIADO UM NUMERO");
+            location.reload();
+        }
+        // ternary
+        document.writeln(sum <= 15 ? "VISH FOI HORRIVEL" : "FOI MUITO BEM");
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // get inital value
+let value = parseInt(lines.shift());
+
+// iter through the file while value is different to 0
+while (value > 0){
+    // create array
+    let nums_2d = [];
+    
+    // create columns, fill up the array and increment all the desired nums
+    for (let i = 0; i < value; i++){
+        // create column
+        nums_2d.push([]);
+        // create temp string
+        let str = "";
+        
+        for(let j = 0; j < value; j++){
+            // fill up
+            nums_2d[i][j] = 1;
+            
+            // check if is a position that needs to be implemented
+            // if value is in the middle, increment
+            if (i < value - 1 && i > 0 && j < value -1 && j > 0){
+                nums_2d[i][j]++;
+            }
+            str += `${nums_2d[i][j]}   `
+        }
+        // print str
+        console.log(str.trim());
+    }
+    
+    // change value at the end
+    value = parseInt(lines.shift());
+}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

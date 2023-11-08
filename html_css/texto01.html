@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .test_h1{
+            /* removes bold*/
+            /* do font stylization */
+            font-weight: normal;
+            font-size: 5rem;
+            /* border stylization */
+            border-style: dashed;
+            border-width: 0.6rem;
+            border-color: aquamarine;
+            /* text and background color */
+            color: rgb(255, 238, 0);
+            background-color: red;
+            /* border stylization */
+            border-width: 1.1rem;
+            border-radius: 2rem;
+
+            /* margin (the changes between the object and the border of the window) */
+            margin: 10rem;
+
+            /* padding is the distance between the lines of the object and the content inside */
+            padding: 5rem;
+
+            /* box shadow */
+            /* right or left (if the value is negative) */
+            /* bottom or top (if the value is negative) */
+            /* blurring */
+            /* color */
+            /* you can use the command 'inset' to the shadow inside the box */
+            box-shadow: 5px 10px 5px black;
+        }
+
+        /* .(name) is used when want to change a tag by the class name */
+        /* # is used when you want to change a tag or an element by the id */
+    </style>
+</head>
+<body>
+    <!-- Paragraph -->
+    <p>My paragraph</p>
+    <p>
+        <b>bold</b>
+        <i>italic</i>
+        <u>underlined</u>
+    </p>
+
+    <p>
+        First line
+        <!-- break the line, not recommended.
+        the best practice is to break the line
+        with CSS -->
+        <br>
+        Second line
+    </p>
+
+    <!-- titles -->
+    <!-- go from 1 to 6 -->
+    <!-- wich higher the number is, smaller is the title (and 'less important') -->
+    <h1 class="test_h1">1</h1>
+    <h2>2</h2>
+    <h3>3</h3>
+    <h4>4</h4>
+    <h5>5</h5>
+    <h6>6</h6>
+</body>

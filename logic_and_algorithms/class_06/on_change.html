@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // function to show an alert
+        function show_alert(tag){
+            if (parseInt(tag.value) === 1){
+                console.log("HTML KKK");
+                return;
+            }
+            console.log(tag.value);
+        }
+
+        document.getElementsByTagName("select", function(){
+
+        })
+    </script>
+</head>
+<body>
+    <!-- you can select what value you want to return
+        example: this.value will get the value from the option 
+        YOU CAN PASS THE VALUE YOU WANT ON DECLARATION
+        OR JUST PASS THE TAG/OBJECT (like this.value) AND CHECK INSIDE
+        THE FUNCTION -->
+    <select onchange="show_alert(this)" name="select-box" id="">
+        <option selected="true" disabled="disabled" value="">default</option>
+        <option value="1">HTML</option>
+        <option value="2">CSS</option>
+        <option value="3">JS</option>
+    </select>
+</body>
+</html>

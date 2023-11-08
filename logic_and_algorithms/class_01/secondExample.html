@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var don`t preserver the scope
+        // that means var is 'globaly' and can be
+        // accessed anywhere in the code
+        var name = 'Arthur';
+
+        {
+            // let preserver the scope
+            // so you can change the variable
+            // inside a loop or something like
+            let name = "Rayssa";
+            document.writeln(name);
+        }
+        document.writeln(name);
+
+        // concat
+        document.writeln("Boa noite "+name+" !");
+        // template string
+        document.writeln(`Boa noite ${name} !`);
+
+        // const value can`t be changed
+        // so, in the code, the value will be the same always
+        const city = "Joao Pessoa";
+
+        city = "ABC";
+        document.writeln(city);
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

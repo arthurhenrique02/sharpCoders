@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function removeItem(items_list, item){
+            for (let i = 0; i < items_list.lengh;i++){
+                if (items_list[i] == item){
+                    items_list.splice(i, 1);
+                    // return the new item list
+                    return 1;
+                }
+            }
+            return -1;
+        }
+
+        var items = [];
+
+        let menu = "1. cadastrar produto\n" +
+                   "2. listar produtos\n" +
+                   "3. remover produto\n" + 
+                   "4. finalizar programa"
+
+        let flag = 0
+        do {
+            flag = prompt(menu);
+
+            switch(flag){
+                case "1":
+                let item = prompt("digite o nome").toLowerCase();
+                items.push(item);
+                break;
+
+                case "2":
+                    let lista = "";
+                    items.forEach(item => {
+                        lista += `${item} `;
+                    });
+                    alert(lista);
+                    break;
+
+                case "3":
+                    let item_to_remove = prompt("digite o nome").toLowerCase();
+                    if (removeItem(items, item_to_remove) == 1){
+                        alert("Removido");
+                    }
+                    else{
+                        alert("nao encontrado");
+                    }
+                    break;
+
+                case "4":
+                    alert("Encerrando");
+                    break;
+
+                default:
+                    alert("OPCAO INVALIDA")
+
+            }
+        }while(flag != 4);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

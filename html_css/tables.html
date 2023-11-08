@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 0.5rem groove black;
+        }
+        td, th {
+            border: 0.3rem solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- a simple table -->
+    <table>
+        <tr>
+            <!-- each td is a column -->
+            <td>Nome</td>
+            <td>Cidade</td>
+            <td>E-mail</td>
+        </tr>
+        <tr>
+            <td>RAYSSA</td>
+            <td>DO AMOR</td>
+            <td>RAYSSA@EMAIL.COM</td>
+        </tr>
+    </table>
+
+    <!-- correct way to create a table -->
+    <table>
+        <!-- head of the table -->
+        <thead>
+            <!-- tr means table row -->
+            <tr>
+                <!-- means table head -->
+                <th>Nome</th>
+                <th>Cidade</th>
+                <th>E-mail</th> 
+            </tr>
+        </thead>
+        <!-- body of the table -->
+        <tbody>
+            <tr>
+                <td>RAYSSA</td>
+                <td>DO AMOR</td>
+                <td>RAYSSA@EMAIL.COM</td>
+            </tr>
+        </tbody>
+        <!-- foot of the table -->
+        <tfoot>
+            <tr>
+                <!-- colspan will define how many spaces the row will ocupy -->
+                <!-- rowspan is how many rows the data will occupy -->
+                <td colspan="2">slaaa</td>
+                <td>KKKKKKKK</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

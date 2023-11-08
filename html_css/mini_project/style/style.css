@@ -1,0 +1,98 @@
+/* GLOBAL */
+/* IMPORTANT TO CONFIGURE BECAUSE BROWSERS HAVE
+DIFFERENT PATTERNS */
+*{
+    margin: 0;
+    padding: 0;
+    font: 14px arial;
+}
+
+header{
+    background-color: whitesmoke;
+    /* overflow: auto removes the 'bug' that
+    occurs when we use float */
+    overflow: auto;
+}
+
+/* change header img float */
+header img {
+    float: left;
+    margin: 0.9rem;
+}
+nav {
+    float: right;
+    /* padding: 0.9rem; */
+    margin: 0.9rem;
+}
+header a{
+    /* when you try to use margin top
+    the stylization will not work because
+    you don`t have changed the default display */
+    /* inline-block make every tag as a block making
+    the display more flexible*/
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.867);
+    text-decoration: none;
+    margin-right: 0.6rem;
+    margin-top: 0.9rem;
+}
+/* hover is an stylization that occurs when mouse pass */
+header a:hover{
+    color: rgba(233, 26, 26, 0.59);
+    font-size: 1.2rem;
+}
+
+
+/* TRIPS */
+.trips{
+    width: 1200px;
+    /* margin 0 auto centralizes the content on the
+    horizontal */
+    margin: 0 auto;
+    background-color: #fefefefe;
+}
+
+.trips li {
+    display: inline-block;
+    margin-left: 0.6rem;
+    margin-top: 1rem;
+}
+
+/* ABOUT */
+.about{
+    width: 65rem;
+    margin: 2rem auto;
+    overflow: auto;
+}
+.about img{
+    float: left;
+    margin-left: 2.5rem;
+}
+.about div{
+    float: right;
+    width: 30rem;
+}
+
+.about h1{
+    font-size: 2.0rem;
+    font-weight: 900;
+}
+
+.about p{
+    margin-top: 0.8rem;
+    text-align: justify;
+    line-height: 1.1rem;
+    text-indent: 1.3rem;
+}
+
+
+/* FOOTER */
+footer{
+    background-color: black;
+    padding: 0.6rem;
+}
+
+footer p{
+    text-align: center;
+    color: white;
+}

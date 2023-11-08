@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        const value = parseFloat(276.82 );
+// var to store the remaining value. Starts with the total value
+let remainingValue = value;
+
+let notes = [100.00, 50.00, 20.00, 10.00, 5.00, 2.00];
+let coins = [1.00, 0.50, 0.25, 0.10, 0.05, 0.01];
+
+// create an empty object
+total_notes_and_coins = {};
+
+// iter through notes
+for (let note of notes){
+    // get the count of the respective note
+    const note_count = Math.floor(remainingValue / note);
+    
+    total_notes_and_coins[note] = note_count;
+    
+    remainingValue = (remainingValue % coin).toFixed(2);
+}
+
+// iter  through coins
+for (let coin of coins){
+    const coin_count = Math.floor(remainingValue / coin);
+    
+    total_notes_and_coins[coin] = coin_count;
+    
+    remainingValue %= coin;
+}
+
+// print quantity of notes and coins
+console.log("NOTAS:");
+for (let note of notes){
+    // get object key value and print
+    if (total_notes_and_coins.hasOwnProperty(note)){
+        console.log(`${total_notes_and_coins[note]} nota(s) de R$ ${note.toFixed(2)}`);
+    }
+}
+console.log("MOEDAS:");
+for (let coin of coins){
+    // get object key value and print
+    if (total_notes_and_coins.hasOwnProperty(coin)){
+        console.log(`${total_notes_and_coins[coin]} nota(s) de R$ ${coin.toFixed(2)}`);
+    }
+}
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

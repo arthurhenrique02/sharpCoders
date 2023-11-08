@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var input = "S\n10\n20\n-5\n3\n2\n1\n32\n31\n80\n11\n92\n21\n23\n19\n73\n29\n28\n19\n1\n39\n29\n82\n27\n283";
+        var lines = input.split('\n');
+        // get operation 
+let operation = lines.shift();
+
+// create an empty array
+let nums_2d = [];
+
+// create sum and count nums vars
+let sum = 0;
+let count_nums = 0;
+
+// create the columns and fill up all the 2d array
+for (let i = 0; i < 4; i++){
+    // create columns
+    nums_2d[i] = [];
+    for (let j = 0; j < 4; j++){
+        nums_2d[i][j] = parseFloat(lines.shift());
+        
+        // sum the desired values
+        if (j > i){
+            sum += nums_2d[i][j];
+            count_nums++;
+        }
+    }
+}
+// check operation
+if (operation === "S"){
+    console.log(sum);
+}
+else if(operation === "M"){
+    console.log((sum / count_nums).toFixed(1));
+}
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

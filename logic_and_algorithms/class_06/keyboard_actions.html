@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function show_key(target){
+            // when you working with GET ELEMENTS (WITH S AT THE END)
+            // YOU NEED TO SPECIFY THE POSITION THAT YOU WANT TO CHANGE
+            // LIKE AN LIST
+            document.getElementsByTagName('h1')[0].innerHTML =  `PRESSED: ${target.value}`;
+
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <input type="text" name="" id="" onkeyup="show_key(this)">
+</body>
+</html>
