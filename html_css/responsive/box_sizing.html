@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-sizing</title>
+
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            /* if you add a border, you need
+            to subtract the value of the border
+            on the width and height
+            because it will gonna be increased on
+            this values */
+            border: 5px solid black;
+            background-color: rebeccapurple;
+            /* padding is the same thing */
+            padding: 10px;
+
+            /* but, if you add the box-sizing
+            the width and height will still the same
+            but the code will calculate the border and padding
+            and subtract from the width and height */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
