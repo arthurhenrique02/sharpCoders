@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        main{
+            /* display flex on the main or the parent of the div
+            will make all divs be displayed on horizontal
+            If you put the display:flex on the div
+            this will just use the default display */
+            display: flex;
+            /* with flex-direction you can select
+            the direction of the flexibility */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row; */
+            flex-direction: row-reverse;
+
+            /* with justify content you can
+            justify the box content */
+            /* justify-content: center; */
+            /* justify-content: flex-start; */
+            /* justify-content: start; */
+            /* justify-content: space-around; */
+            justify-content: space-evenly;
+
+            /* if you want to change the positions
+            verticaly, you can use align-items */
+            /* align-items: baseline; */
+            /* align-items: end; */
+            /* align-items: flex-start; */
+            align-items: center;
+            width: 600px;
+            height: 400px;
+            background-color: black;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </main>
+</body>
+</html>
