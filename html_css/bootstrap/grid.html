@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID WITH BS</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <style>
+        
+        [class *="container"]{
+            background-color: purple;
+        }
+
+        [class *="offset"]{
+            background-color: green;
+        }
+        
+    </style>
+</head>
+<body>
+     <!-- container -->
+     <body>
+        <!-- with the class container we will have a margin -->
+        <!-- to use a container without the margin
+        we use the class container-fluid -->
+        <!-- <section class="container-fluid">
+            <p>HELLO</p>
+        </section> -->
+
+        <!-- In the section "layouts", on the
+        BOOTSTRAP DOCS we can see how containers
+    worsk and see the respective sizes -->
+
+
+        <!-- GRID -->
+        <!-- if you want to use in more
+        than 1 screen, you can use
+        "smaller" grid classes
+        Like, if you want to use grid to
+        screens greater than 992px, you can use
+        the class "col-lg-..." -->
+        <!-- <div class="row">
+            <div class="col-xl-4 col-sm-6" style="background-color: aqua;">info 1</div>
+            <div class="col-xl-4 col-sm-6" style="background-color: purple;">info 2</div>
+            <div class="col-xl-4 col-sm-6" style="background-color: green;">info 3</div>
+        </div> -->
+
+
+        <!-- GRID -->
+        <div class="container">
+            <div class="row">
+                <!-- offset limits the
+                spacing before the col -->
+                <!-- If you want to use only
+                in a respective screen (sm, md, etc) you can change the class name to offset-md-8 -->
+                <div class="offset-8 col-4 col-md-6 offset-md-3">
+                    <p>hello</p>
+                </div>
+            </div>
+        </div>
+     </body>
+</body>
+</html>
