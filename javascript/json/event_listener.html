@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT LISTENER</title>
+    <script>
+        window.onload = () => {
+            // create button element
+            let btn = document.createElement("button");
+
+            btn.innerText = "Click here";
+            btn.value = "SECRET"
+
+            // add event listener
+            btn.addEventListener("click", (objBtn)=>{
+                // get the clicked button and
+                // show his value
+                alert(objBtn.target.value);
+            });
+            document.getElementsByTagName("body")[0].appendChild(btn);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

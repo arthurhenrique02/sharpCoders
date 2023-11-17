@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS</title>
+
+    <script>
+        // names
+        let names = [
+            "Arthur",
+            "Rayssa",
+            "Rayane",
+            "Vinicius",
+            "Pedro"
+        ];
+
+        // print using map
+        names.map(obj => document.writeln(obj+"<hr>"));
+
+        // creating a new array with
+        // filtered values
+        let names2 = names.filter(name => {
+            return name.toLocaleLowerCase().indexOf("r") != -1;
+        });
+
+        // using foreach
+        // we can use the foreach with only the value
+        // and with the index (adding another
+        // var at the end)
+        names.forEach((name, i) => {
+            document.writeln(`${i}: ${name} <hr>`);
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

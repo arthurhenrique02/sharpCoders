@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>ELEMENTS</title>
+
+    <script>
+        // create an array with
+        // cities
+        let cities = [
+            "Sao Paulo",
+            "Curitiba",
+            "Joao Pessoa",
+            "Coracao dela",
+        ];
+
+        // on load
+        window.onload = function(){ 
+            // get the first ul element
+            let list = document.getElementsByTagName("ul")[0];
+
+            for (let i = 0; i < cities.length; i++){
+                // create new li tag
+                let item = document.createElement("li");
+                
+                // add text to the element
+                item.innerText = cities[i];
+                
+                // append new li tag on the ul list
+                list.appendChild(item);
+            }
+        }
+
+        // .append is a method to add any structure
+        // from a text to a tag, even if is inside ""
+        // without html or with html
+
+        // the .appendChild will just append an element with
+        // HTML
+        let first_div = document.getElementsByTagName("div")[0];
+
+        // create item
+        let text = document.createElement("p");
+        text.innerText = "KKKK";
+        first_div.appendChild(text);
+
+    </script>
+</head>
+<body>
+    <!-- list -->
+    <ul>
+
+    </ul>
+
+    <div>
+
+    </div>
+</body>
+</html>

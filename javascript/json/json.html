@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>JSON</title>
+
+    <script>
+        // JSON -> JavaScript Object Notation
+        let pessoa = {
+            "nome": "Rayssa",
+            "idade": 21,
+            "cidade": "Joao Pessoa",
+        };
+
+        // this will show just "[object object]"
+        // and not the data of the JSON
+        document.write(pessoa);
+
+        // to show all infos you can use
+        // the JSON`s method called stringfy
+        document.write(JSON.stringify(pessoa));
+
+        // you can transform a string in JSON
+        // using the JSON`s parse method
+        let str = "{'nome': 'arthur'}";
+        let pessoa2 = JSON.parse(str);
+
+        document.write(pessoa2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
