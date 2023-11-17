@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requests</title>
+
+    <script>
+        // use fetch to make all requests with pure JS
+        fetch(
+            // pass the url
+            "http://localhost:3000/clientes/"
+            // by default, fetch`s methods is GET
+        ).then(request =>
+            // get the request`s JSON data
+            request.json()
+        ).then(clients =>
+            console.table(clients)
+        )
+
+        fetch(
+            // pass the url
+            "http://localhost:3000/clientess/",
+            // request data
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    "nome": "Lua",
+                    "idade": 0.5
+                })
+            }
+        ).then(request => 
+            request.json()
+        ).then(new_client =>
+            console.table(new_client)
+        ).catch(error =>
+            console.log(`Error: ${error}`)
+        ).finally(() =>
+            console.log("CLIENTE ADICIONADO")
+        );
+        
+        // delete all unecessary data
+        for (let i = 4; i < 15; i++){
+            fetch(
+                // pass the url
+                "http://localhost:3000/clientes/"+i,
+                // request data
+                {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        "nome": "Lua",
+                        "idade": 0.5
+                    })
+                }
+            )
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
