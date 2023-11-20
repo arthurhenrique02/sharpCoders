@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditto - Async</title>
+    <script>
+        // fetch(
+        //     "https://pokeapi.co/api/v2/pokemon/ditto"
+
+        // ).then((request) =>
+        //     // transform request in JSON
+        //     request.json()
+        // ).then((response) => 
+        //     console.log(response)
+        // );
+
+        // DON`T RECOMMENDED TO DO THAT
+        // fetch inside a loop will consume a lot of space and time
+        // in addition to that will make your application slower
+        // function requests(){
+        //     for(let i = 1; i <=151; i++){
+        //         fetch(
+        //             "https://pokeapi.co/api/v2/pokemon/"+i
+        //         ).then(request => 
+        //             request.json()
+        //         ).then(response =>
+        //             console.log(response.name)
+        //         );
+        //     }
+        // }
+
+        // making requests function async
+        async function requests(){
+            for(let i = 1; i <=151; i++){
+                // make request
+                let request = await fetch("https://pokeapi.co/api/v2/pokemon/"+i);
+
+                // get pokemon info
+                let pokemon = await request.json();
+                
+                // print name
+                console.log(pokemon.name);
+            }
+        }
+
+        // is needed to put "await" before the
+        // function`s call when you using more than
+        // one async function
+        await requests();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
