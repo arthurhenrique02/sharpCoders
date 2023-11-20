@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Functions</title>
+    
+    <script>
+        // Func msg1
+        // function msg1(){
+        //     // if the msg1 function
+        //     // is slower, the exectMessages
+        //     // it will generate an error
+        //     // because the function will not return
+        //     // the value in real time
+
+        //     setTimeout(() => {
+        //         return "First msg";
+        //     }, 1000);
+        // }
+
+        function msg1(){
+            // create a new Promise
+            // Promise params works like:
+            // param1 stands as susccessfully data and return
+            // param2 stands as error data or return
+            // param3 stands as a callback that will
+            //  be called after a successfully or error return
+            return new Promise((response) => {
+                // to return the data, you need
+                // to call the function param
+                // and pass the data that you want
+                response("First message")
+            });
+        }
+
+        // Func msg2
+        function msg2(){
+            return "Second msg";
+        }
+
+        // non-async func
+        // func to exect messages functions
+        function execMessages(){
+            let response1 = msg1();
+            let response2 = msg2();
+
+            console.log(response1);
+            console.log(response2);
+        }
+
+        execMessages();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
