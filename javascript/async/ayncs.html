@@ -29,7 +29,10 @@
                 // to return the data, you need
                 // to call the function param
                 // and pass the data that you want
-                response("First message")
+                setTimeout(() => {
+                    response("First message")
+                    
+                }, 1000);
             });
         }
 
@@ -40,8 +43,17 @@
 
         // non-async func
         // func to exect messages functions
-        function execMessages(){
-            let response1 = msg1();
+        // function execMessages(){
+        //     let response1 = msg1();
+        //     let response2 = msg2();
+
+        //     console.log(response1);
+        //     console.log(response2);
+        // }
+        // make execMessages async
+        async function execMessages(){
+            // Wait for msg1 returns
+            let response1 = await msg1();
             let response2 = msg2();
 
             console.log(response1);
