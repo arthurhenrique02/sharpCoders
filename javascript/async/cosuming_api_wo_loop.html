@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API - Async - Without loop</title>
+    <script>
+        async function requests(){
+            // make a request and GET the response
+            let request = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
+
+            // transform received data in json
+            let pokemons = await request.json();
+
+            // map the pokemons results list to
+            // get the corresponding url
+            pokemons.results.map(row => {requestPokemon(row.url)});
+        }
+
+        // a function to get Pokemon`s 
+        // informations
+        async function requestPokemon(url){
+            // make request
+            let request = await fetch(url);
+
+            // get current pokemon data
+            let pokemon = await request.json();
+
+            // print name
+            console.log(pokemon.name);
+
+            // get 'list' element
+            let list = document.getElementById("list");
+
+            // create image element
+            let img = document.createElement("img");
+            img.alt = pokemon.name;
+
+            // add image
+            img.src = pokemon.sprites.front_default;
+            
+            // add image to the document
+            list.appendChild(img)
+        }
+        // execute on load
+        window.onload = function(){
+            requests();
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="list">
+
+    </div>
+</body>
+</html>
