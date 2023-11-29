@@ -10,5 +10,5 @@ import { Component } from '@angular/core';
 })
 export class SecondComponentComponent {
   // attribute to show text
-  showText:boolean = false;
+  showText:boolean = true;
 }
