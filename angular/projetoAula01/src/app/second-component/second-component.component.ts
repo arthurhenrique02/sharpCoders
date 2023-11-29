@@ -16,4 +16,9 @@ export class SecondComponentComponent {
     // change class attribute
     this.showText = !this.showText;
   }
+
+  names:string[] = [
+    "Arthur", "Rayssa",
+    "Abc", "Def"
+  ]
 }

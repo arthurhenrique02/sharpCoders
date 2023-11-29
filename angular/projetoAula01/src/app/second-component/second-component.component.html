@@ -18,7 +18,8 @@
  <button (click)="changeTextVisibility()"> change text visibility</button>
  <!-- This *ngIf will always be used when working
 with HTML tags -->
- <!-- <p *ngIf="showText">using ngIf</p> -->
+ <p *ngIf="showText">using ngIf</p>
+ <!-- ======================== -->
  <!-- this ngIf don`t update the DOM -->
  <!-- We use this if when we`re using TEMPLATE -->
  <!-- <ng-template></ng-template> -->
@@ -26,3 +27,11 @@ with HTML tags -->
  <!-- <ng-template [ngIf]="showText">
     <p>TEMPLATE TEXT</p>
  </ng-template> -->
+ <!-- ======================== -->
+
+ <!-- using FOR -->
+ <ol>
+    <div *ngFor="let name of names">
+        <li>{{name}}</li>
+    </div>
+</ol>
