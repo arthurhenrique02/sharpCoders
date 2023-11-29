@@ -9,17 +9,22 @@ class Person {
     private cpf:string;
 
     // tried to overload
-    //constructor();
-    constructor(p_name:string, age:number, cpf:string){
+    public constructor(p_name:string);
+    public constructor(p_name:string, age?:number, cpf?:string){
         this.person_name =  p_name;
-        this.age = age;
-        this.cpf = cpf;
 
-        this.print_name();
+        if (age){
+            this.age = age;
+        }
+        if (cpf){
+            this.cpf = cpf;
+            this.print_name_and_cpf();
+        }
+
     }
 
     // don`t use the word `function` inside a class
-    private print_name(){
+    private print_name_and_cpf(){
         console.log(`Seu nome é: ${this.person_name}\n` +
                     `cpf: ${this.cpf}`);
         
@@ -28,6 +33,8 @@ class Person {
 
 
 // create instance
-let person = new Person("Arthur", 21, "1234");
+let person1 = new Person("Arthur");
+let person2 = new Person("Arthur", 21, "1234");
 
-console.log(person.person_name, person.age);
+console.log(person1.person_name, person1.age);
+console.log(person2.person_name, person2.age);

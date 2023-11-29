@@ -1,17 +1,44 @@
-var Person = /** @class */ (function () {
-    // tried to overload
-    //constructor();
-    function Person(p_name, age) {
-        this.person_name = p_name;
-        this.age = age;
-        this.print_name();
+// class Person {
+//     // attributes
+//     // it`s not needed to put 'let' or something else
+//     // before attribute`s declaration
+//     person_name:string;
+//     age:number;
+//     city:string
+//     // private attribut
+//     private cpf:string;
+//     // tried to overload
+//     public constructor(p_name:string);
+//     public constructor(p_name:string, age?:number, cpf?:string){
+//         this.person_name =  p_name;
+//         if (age){
+//             this.age = age;
+//         }
+//         if (cpf){
+//             this.cpf = cpf;
+//             this.print_name_and_cpf();
+//         }
+//     }
+//     // don`t use the word `function` inside a class
+//     private print_name_and_cpf(){
+//         console.log(`Seu nome é: ${this.person_name}\n` +
+//                     `cpf: ${this.cpf}`);
+//     }
+// }
+// // create instance
+// let person1 = new Person("Arthur");
+// let person2 = new Person("Arthur", 21, "1234");
+// console.log(person1.person_name, person1.age);
+// console.log(person2.person_name, person2.age);
+var MyClass = /** @class */ (function () {
+    function MyClass(p1, p2) {
+        this.p2 = 0;
+        this.p1 = p1;
+        if (p2) {
+            this.p2 = p2;
+        }
     }
-    // don`t use the word `function` inside a class
-    Person.prototype.print_name = function () {
-        console.log("Seu nome \u00E9: ".concat(this.person_name));
-    };
-    return Person;
+    return MyClass;
 }());
-// create instance
-var person = new Person("Arthur", 21);
-console.log(person.person_name, person.age);
+var cls1 = new MyClass('Tim');
+var cls2 = new MyClass('Tim', 27);
