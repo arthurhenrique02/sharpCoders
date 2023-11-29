@@ -11,4 +11,9 @@ import { Component } from '@angular/core';
 export class SecondComponentComponent {
   // attribute to show text
   showText:boolean = true;
+
+  changeTextVisibility():void {
+    // change class attribute
+    this.showText = !this.showText;
+  }
 }
