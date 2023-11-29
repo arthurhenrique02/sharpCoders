@@ -16,4 +16,13 @@
 
  <!-- working with NGIF -->
  <button (click)="changeTextVisibility()"> change text visibility</button>
- <p *ngIf="showText">using ngIf</p>
+ <!-- This *ngIf will always be used when working
+with HTML tags -->
+ <!-- <p *ngIf="showText">using ngIf</p> -->
+ <!-- this ngIf don`t update the DOM -->
+ <!-- We use this if when we`re using TEMPLATE -->
+ <!-- <ng-template></ng-template> -->
+ <!-- <p [ngIf]="showText">using ngIf</p> -->
+ <!-- <ng-template [ngIf]="showText">
+    <p>TEMPLATE TEXT</p>
+ </ng-template> -->
