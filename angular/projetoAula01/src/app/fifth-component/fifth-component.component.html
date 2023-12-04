@@ -1,1 +1,12 @@
-<p>fifth-component works!</p>
+<h1>{{forms.value| json}}</h1>
+
+<!-- When you work with Reactive form, is needed to define
+the form`s formGroup -->
+<!-- And to call the Reactive form vars you need to use
+the method called FormControlName -->
+<form [formGroup]="forms" (submit)="submit_form()">
+    <input type="email" formControlName="email" placeholder="Email">
+    <input type="password" formControlName="password"  placeholder="Password">
+
+    <input type="submit" value="">
+</form>
