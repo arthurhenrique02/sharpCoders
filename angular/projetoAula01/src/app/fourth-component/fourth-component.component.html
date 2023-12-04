@@ -1,1 +1,17 @@
-<p>fourth-component works!</p>
+<h1>{{ text }}</h1>
+
+<!-- dinamically changes the variable value -->
+<input type="text" [(ngModel)]="text">
+
+<hr>
+
+<!-- FORM -->
+<!-- when ngModel is used inside a form, is needed to
+define the name field -->
+<form action="">
+    <input type="email" name="email" id="" [(ngModel)]="email">
+    <input type="password" name="password" id="" [(ngModel)]="password">
+</form>
+
+<p>{{email}}</p>
+<p>{{password}}</p>
