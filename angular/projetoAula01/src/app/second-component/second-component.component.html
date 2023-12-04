@@ -35,3 +35,21 @@ with HTML tags -->
         <li>{{name}}</li>
     </div>
 </ol>
+
+<!-- ======================== -->
+
+<!-- SWITCH -->
+
+<select [(ngModel)]="p_language">
+    <option value="" disabled >Selecione uma linguagem</option>
+    <option value="C#">C#</option>
+    <option value="Java">Java</option>
+    <option value="Python">Python</option>
+</select>
+
+<ul [ngSwitch]="p_language">
+    <li *ngSwitchCase="'C#'">C# pertence a Microsoft</li>
+    <li *ngSwitchCase="'Java'">Java pertence a Oracle</li>
+    <li *ngSwitchCase="'Python'">Python é muito rápido</li>
+    <li *ngSwitchDefault="'Qualquer'">Qualquer linguagem</li>
+</ul>
