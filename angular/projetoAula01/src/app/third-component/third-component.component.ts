@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './third-component.component.css'
 })
 export class ThirdComponentComponent {
+  avg:number = 8;
 
+  language:string = "C#";
+
+  names:string[] = [];
 }
