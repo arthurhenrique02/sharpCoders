@@ -1,0 +1,10 @@
+create new project: ng new projetoAula03
+
+create components inside another directory (inside apps)
+- ng g c pages/login
+
+create route authenticator (Auth guard) (this is necessary to add security to the routes)
+- ng g g auth/authenticate
+
+install Bootstrap 
+- npm i bootstrap
