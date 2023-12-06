@@ -8,6 +8,7 @@ export const authenticateGuard: CanActivateFn = (route, state) => {
   // if user is not logged in, redirect to login page
   if (localStorage.getItem('email') == undefined) {
     router.navigateByUrl('/login');
+    return false;
   }
 
   // enable access by default
