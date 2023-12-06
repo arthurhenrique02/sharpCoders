@@ -1,1 +1,14 @@
-<p>login works!</p>
+<p>{{ form.value | json }}</p>
+
+<!-- check inputs -->
+<!-- The "?" is to not accept null values -->
+<!-- by default, the 'get' method accepts null values -->
+<p *ngIf="form.get('email')?.hasError('required')">O e-mail precisa ser informado</p>
+<p *ngIf="form.get('email')?.hasError('email')">Informe um email válido</p>
+
+<!-- FORM -->
+<form [formGroup]="form">
+    <input type="email" name="" id="" class="form-control" placeholder="Informe seu email" formControlName="email">
+    <input type="password" name="" id="" class="form-control" placeholder="Informe sua senha" formControlName="password">
+    <button class="btn btn-primary">Entrar</button>
+</form>
